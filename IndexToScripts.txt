@@ -1,0 +1,45 @@
+Index to scripts used for dryland ag paper  ** note need to add scripts from MP Lucas
+
+## FieldSystemCovariates_Polygons_GraphsFinal.R
+## Project: DrylandAg
+## Author: A. Kagawa-Viviani
+## Date: 23 January 2018
+##   from FieldSystemCovariates_Polygons_Graphs2.R (15 Dec 2017) 
+##   from FieldSystemCovariates_Polygons_Graphs.R (13 Nov 2017)
+##   from FieldSystemCovariates_Polygons.R (10 Nov 2017)
+##   from FieldSystemCovariates.R (28 Oct 2017); 
+##   Prior to that, from ExtractSpatialCovariates.R associated with HITemp
+## Notes: 1) Extract values of gridded climate data for known locations
+##        2) Visualize these
+## Figure 2
+## Figure 3
+## Figure S2
+
+--------------------------------------------------------------
+## FieldSystemCovariates_CombinedAnalysesFin.R
+## Project: DrylandAg
+## Author: A. Kagawa-Viviani
+## Date: 23 Jan 2017 
+## Notes: Script associated with FieldSystemCovariates_Polygons_GraphsFin.R
+##        -Generate rasters for seasonality metrics of aridity
+##        -Explore intra-annual shifting of optimal growing conditions
+## History: from FieldSystemCovariates_CombinedAnalyses2 (16 Dec 2017)
+##          from FieldSystemCovariates_CombinedAnalyses (Nov 2017)
+##          modified from RFSeasonality_Feng2.R; 
+## Figure 4
+## Figure 6
+# References: 
+#    Feng X, Porporato A, Rodriguez-Iturbe I (2013) Changes in rainfall seasonality 
+#      in the tropics. Nature Clim Change 3:811-815. doi: 10.1038/nclimate1907
+#    Valenzuela, H., S. Fukuda, and A. Arakaki (1994) Sweetpotato Production Guides for 
+#      Hawaii. Pages 1-10. Hawaii Institute of Tropical Agriculture and Human Resources.
+
+------------------------------------------------------------
+## FieldSystemThresholding2.R
+## Project: DrylandAg
+## Author: A. Kagawa-Viviani
+## Date: revised 9 Jan 2017, revised 16 Dec 2017
+##   Initial version 12 Dec 2017 based on output from Matt Lucas 
+## Notes: use output from MP Lucas scripts: tmin_rf_cond_loop_dryag.R, tmin_dry_cond_loop_dryag.R
+##   For scripts and files, see folder MPLucas_crop_runs 
+
