@@ -18,7 +18,7 @@ library(reshape2)
 library(ggplot2)
 
 #add raster data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\FS3_geotiff_ContiguousPolyDryland_coast_clipped\\FS3_geotiff_ContiguousPolyDryland_coast_clipped")
+setwd("GTIFF FILES HERE\\FS3_geotiff_ContiguousPolyDryland_coast_clipped")
 tairmo<-brick("tmeanstack.tif",package="raster")#stack of 12 mo min air temp 
 print(tairmo)
 plot(tairmo)
@@ -30,7 +30,7 @@ print(aridmo)
 plot(aridmo)
 aridmo_max<-round(max(maxValue(aridmo)),2)#max arid value in all rasters
 #add vector data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\dry_data\\ContiguousPolygons")
+setwd("GIS FILES HERE\\ContiguousPolygons")
 dryag<- readOGR(".", "ContiguousPolyDryland_wgs84")
 head(dryag)
 plot(dryag)aridmo_min<-round(min(minValue(aridmo)),2)#min arid value in all rasters
@@ -47,7 +47,7 @@ run <- 1 #count runs
 breaks <- 0:12
 colors <- c("red",rep("yellow",4),rep("green",4),rep("forestgreen",4))
 
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\rexports\\crop_runs\\arid_tair_runs_fine")
+setwd("OUTPUT HERE\\arid_tair_runs_fine")
 
 #for loop
 t1<-Sys.time()#time start
@@ -118,7 +118,7 @@ head(data_table_arid,12)
 tail(data_table_arid,12)
 
 #write table
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\rexports\\crop_runs")
+setwd("OUTPUT HERE\\rexports\\crop_runs")
 write.csv(data_table_arid,"arid_tair_per_crop_FINAL_fine.csv",row.names=F)
 
 #plot all arid solutions where temp==18 for each system
