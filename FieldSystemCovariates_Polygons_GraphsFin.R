@@ -2,11 +2,6 @@
 ## Project: DrylandAg
 ## Author: A. Kagawa-Viviani
 ## Date: 23 January 2018
-##   from FieldSystemCovariates_Polygons_Graphs2.R (15 Dec 2017) 
-##   from FieldSystemCovariates_Polygons_Graphs.R (13 Nov 2017)
-##   from FieldSystemCovariates_Polygons.R (10 Nov 2017)
-##   from FieldSystemCovariates.R (28 Oct 2017); 
-##   Prior to that, from ExtractSpatialCovariates.R associated with HITemp
 ## Notes: 1) Extract values of gridded climate data for known locations
 ##        2) Visualize these
 ## Figure 2
@@ -20,10 +15,12 @@ library('raster')
 library('rgdal')
 
 ## Set working directories
-setwd("C:/Users/Aurora/OneDrive/Documents/Projects/DrylandAgEcohydrology/Data_Figures")
+setwd("DIRECTORY HERE")
 
 ## Set location of GIS files
-gisdir<-"C:/Users/Aurora/OneDrive/GIS/"
+## These should include DEM and climate layers
+##   from http://evapotranspiration.geography.hawaii.edu/, http://rainfall.geography.hawaii.edu
+gisdir<-"GIS FILES HERE"
 
 
 ###### Read in shapefiles ################################################
@@ -41,7 +38,7 @@ HI3dry.temp<-spTransform(HI3dry.UTM,
                     CRS="+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs")
 
 ## Read in ahupuaa shapefile for mapping later
-ahupuaa<-readOGR(dsn="C:/Users/Aurora/OneDrive/GIS/Ahupuaa", layer="Ahupuaa")
+ahupuaa<-readOGR(dsn="GIS FILES HERE/Ahupuaa", layer="Ahupuaa")
 proj4string(ahupuaa)    # "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
 
 
@@ -120,7 +117,7 @@ clouds.mo<-stack(clouds[1:12]); clouds.ann<-raster(clouds[13])
 winds.24<-stack(winds[1:24])
 
 # RF Seasonality, calculated previously
-rfseason<-stack("C:/Users/Aurora/OneDrive/Documents/PhD Research/Ch1_RFSeasonality/RFseason_stack.tif") 
+rfseason<-stack("OUTPUT FILE/RFseason_stack.tif") 
 names(rfseason)=c("CV_MeanRF","RelEntropy_D", "Seasonality_S", "Centroid_C", "Duration_Z")
 
 # Create a list of directories for monthly series labeled with abbreviations (vs numbers)
