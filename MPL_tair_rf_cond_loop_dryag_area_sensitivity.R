@@ -18,13 +18,13 @@ library(reshape2)
 library(ggplot2)
 
 #add vector data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\dry_data\\ContiguousPolygons")
+setwd("GIS FILES HERE\\ContiguousPolygons")
 dryag<- readOGR(".", "ContiguousPolyDryland_wgs84")
 head(dryag)
 plot(dryag)
 
 #add raster data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\FS3_geotiff_ContiguousPolyDryland_coast_clipped\\FS3_geotiff_ContiguousPolyDryland_coast_clipped")
+setwd("GTIFF FILES HERE\\FS3_geotiff_ContiguousPolyDryland_coast_clipped")
 tairmo<-brick("tmeanstack.tif",package="raster")#stack of 12 mo min air temp 
 print(tairmo)
 plot(tairmo)
@@ -49,7 +49,7 @@ run <- 1 #count runs
 breaks <- 0:12
 colors <- c("red",rep("yellow",4),rep("green",4),rep("forestgreen",4))
 
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\rexports\\crop_runs\\rf_tair_runs_fine")
+setwd("OUTPUT HERE\\rexports\\crop_runs\\rf_tair_runs_fine")
 
 #for loop
 t1<-Sys.time()#time start
