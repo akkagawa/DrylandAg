@@ -1,5 +1,5 @@
 # DrylandAg
-Listed below are scripts associated with analyses and figures for manuscript on Hawaii Island dryland agriculture and seasonality.  For now, please cite (for now) Kagawa-Viviani A.K., N.K. Lincoln, S. Quintus, M.P. Lucas, T.W. Giambelluca. (in review) Spatial patterns of seasonal crop production suggest coordination within and across dryland agricultural systems of Hawaiʻi Island. Ecology and Society.
+Listed below are scripts associated with analyses and figures for manuscript on Hawaii Island dryland agriculture and seasonality.  Please cite (for now) <em> Kagawa-Viviani A.K., N.K. Lincoln, S. Quintus, M.P. Lucas, T.W. Giambelluca. (in review) Spatial patterns of seasonal crop production suggest coordination within and across dryland agricultural systems of Hawaiʻi Island. Ecology and Society. </em>
 
 ## [FieldSystemCovariates_Polygons_GraphsFin.R](https://github.com/akkagawa/DrylandAg/blob/master/FieldSystemCovariates_Polygons_GraphsFin.R)
 This script extracts values of gridded climate data for known locations and generates visualizations including Figures 2, 3, A2 in the manuscript.
