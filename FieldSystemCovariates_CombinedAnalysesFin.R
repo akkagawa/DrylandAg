@@ -5,9 +5,6 @@
 ## Notes: Script associated with FieldSystemCovariates_Polygons_GraphsFin.R
 ##        -Generate rasters for seasonality metrics of aridity
 ##        -Explore intra-annual shifting of optimal growing conditions
-## History: from FieldSystemCovariates_CombinedAnalyses2 (16 Dec 2017)
-##          from FieldSystemCovariates_CombinedAnalyses (Nov 2017)
-##          modified from RFSeasonality_Feng2.R; 
 ## Figure 4
 ## Figure 6
 
@@ -19,7 +16,7 @@
 
 
 ## Set up workspace -----
-setwd('C:/Users/Aurora/OneDrive/Documents/Projects/DrylandAgEcohydrology/Data_Figures/')
+setwd('DIRECTORY HERE')
 op <- par()
 
 library('raster')
@@ -185,7 +182,7 @@ C[C>12]<-C[C>12]-12
 
 ## Prepare for mapping: ahupuaa ---------------------------------------------------------
 library(rgeos)  # crop the ahupuaa shapefile too for plotting
-ahupuaa<-readOGR(dsn="C:/Users/Aurora/OneDrive/GIS/Ahupuaa", layer="Ahupuaa")
+ahupuaa<-readOGR(dsn="GIS FILES HERE/Ahupuaa", layer="Ahupuaa")
 proj4string(ahupuaa)
 ext.HI3dry<-extent(c(-156.2, -155.4, 18.9, 20.3)) # Zoom in to leeward HI
 ahucrop<-crop(ahupuaa, ext.HI3dry)
@@ -368,7 +365,7 @@ names(plant2)<-c(names(plant),
                  "diff_arid2.5.rf90")
 
 ### Read in polygons and disaggregate field systems -----
-HI3dry.wgs84coast<-readOGR(dsn="C:/Users/Aurora/OneDrive/GIS/Project_DrylandAgEcohydrology/ContiguousPolyDryland_wgs84_coast_clipped.shp", 
+HI3dry.wgs84coast<-readOGR(dsn="GIS FILES HERE/ContiguousPolyDryland_wgs84_coast_clipped.shp", 
                     layer="ContiguousPolyDryland_wgs84_coast_clipped")
 proj4string(HI3dry.wgs84coast)  
 crs<-proj4string(aridity) # "+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs"
@@ -420,7 +417,7 @@ plot(plant.kau$rfseason$Duration_Z, col=rf.colors(24), add=T, alpha=0.8)
 
 
 ##### Maps of optimal growing conditions by month #######################################
-# gisdir<-"C:/Users/Aurora/OneDrive/GIS/Project_DrylandAgEcohydrology/"
+# gisdir<-"GIS FILES HERE"
 # HI3dry.UTM<-readOGR(dsn=paste0(gisdir, "ContiguousPolyDryland_wgs84_coast_clipped.shp"), 
 #                     layer="ContiguousPolyDryland_wgs84_coast_clipped")
 # proj4string(HI3dry.UTM)  # UTM Zone 5...
