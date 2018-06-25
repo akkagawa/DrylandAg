@@ -11,9 +11,8 @@ This script, associated with [FieldSystemCovariates_Polygons_GraphsFin.R](https:
 3) generates Figures 4, 7 in the manuscript
 
 References: 
-
-   Feng X, Porporato A, Rodriguez-Iturbe I (2013) Changes in rainfall seasonality in the tropics. Nature Clim Change 3:811-815. [doi: 10.1038/nclimate1907](https://www.nature.com/articles/nclimate1907)  
-   Valenzuela, H., S. Fukuda, and A. Arakaki (1994) Sweetpotato Production Guides for Hawaii. Pages 1-10. Hawaii Institute of Tropical Agriculture and Human Resources. http://hdl.handle.net/10125/5497  
+* Feng X, Porporato A, Rodriguez-Iturbe I (2013) Changes in rainfall seasonality in the tropics. Nature Clim Change 3:811-815. [doi: 10.1038/nclimate1907](https://www.nature.com/articles/nclimate1907)  
+* Valenzuela, H., S. Fukuda, and A. Arakaki (1994) Sweetpotato Production Guides for Hawaii. Pages 1-10. Hawaii Institute of Tropical Agriculture and Human Resources. http://hdl.handle.net/10125/5497  
 
 ## Sensitivity analyses (author: MP Lucas)
 Sensitivity analysis calculating percent area meeting various combinations of rainfall/aridity and air temp values. This code takes monthly rainfall (mm)/aridity & tair (C) rasters and reclasses multiple combinations of these two variables on a monthly basis to define a crop-able (cultivable) area, then combines all 12 months to calculate annual % of dry ag system that is crop-able, as defined by pixels that are crop-able for >=1 month.
