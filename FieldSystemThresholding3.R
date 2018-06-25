@@ -3,14 +3,14 @@
 ## Author: A. Kagawa-Viviani
 ## Date: revised 9 Jan 2017, revised 16 Dec 2017
 ##   Initial version 12 Dec 2017 based on output from Matt Lucas 
-## Notes: use output from MP Lucas scripts: tmin_rf_cond_loop_dryag.R, tmin_dry_cond_loop_dryag.R
+## Notes: use output from MPL: MPL_tair_rf_cond_loop_dryag_area_sensitivity.R, MPL_tair_airdity_cond_loop_dryag_area_sensitivity.R
 ##   For scripts and files, see folder MPLucas_crop_runs 
 
 library(lattice)
 library(plotly)
 
 #Set Working Directory
-setwd("C:/Users/Aurora/OneDrive/Documents/Projects/DrylandAgEcohydrology/Data_Figures/MPLucas_crop_runs")
+setwd("THRESHOLDING OUTPUT/MPLucas_crop_runs")
 dat_rf_tmean_all<-read.csv("rf_tair_per_crop_FINAL_fine.csv")  # old: rf_tmin_per_crop_FINAL.csv
 dat_arid_tmean_all<-read.csv("arid_tair_per_crop_FINAL_fine.csv") # old: dry_tmin_per_crop_FINAL_redo.csv
 
@@ -74,7 +74,7 @@ pRF <- subplot(p.koh, p.kon, p.kau,
   layout(title = "Fraction Cultivable Area",
          xaxis = list(title = 'Monthly Rainfall (mm)'),
          yaxis = list(title=''), 
-         yaxis2 = list(title='Temperature (°C)'),
+         yaxis2 = list(title='Temperature (Â°C)'),
          yaxis3 = list(title=''))
 
 ## Aridity and Tair thresholding
@@ -114,7 +114,7 @@ pArid <- subplot(p2.koh, p2.kon, p2.kau,
          xaxis = list(title = 'Monthly Aridity (mm/mm)'),
          yaxis = list(title=''), 
          yaxis3 = list(title=''),
-         yaxis2 = list(side='left', title='Temperature (°C)'),
+         yaxis2 = list(side='left', title='Temperature (Â°C)'),
          showlegend=FALSE)
 
 # Create a shareable link to your chart
