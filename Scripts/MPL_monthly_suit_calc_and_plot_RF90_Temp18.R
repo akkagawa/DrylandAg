@@ -12,13 +12,13 @@ library(dplyr)
 library(reshape2)
 
 #add monthly suit raster data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\rexports\\raster_outputs")
+setwd("DIRECTORY\\raster_outputs")
 thresh<-brick("thresh.rf90.temp18.tif",package="raster")#per pixel count of months rf>100mm & tsurf>=21c 
 print(thresh)
 plot(thresh)
 
 #add vector data
-setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\dry_data\\ContiguousPolygons")
+setwd("DIRECTORY\\ContiguousPolygons")
 dryag<- readOGR(".", "ContiguousPolyDryland_wgs84_coast_clipped")
 head(dryag)
 
@@ -50,7 +50,7 @@ names(final_monthy_moku_suit_area)
 
 
 #make plots & open data (if needed)
-#setwd("C:\\Users\\mpluc\\Documents\\noa_projects\\dry_ag_sytems\\rexports\\rf90.temp18")
+#setwd("DIRECTORY\\rf90.temp18")
 #final_monthy_moku_suit_area<-read.csv("thresh.rf90.temp18 moku_month_crop_area_annual.csv")
 #head(final_monthy_moku_suit_area)
 final_monthy_moku_suit_area$DryAgPer<-final_monthy_moku_suit_area$DryAgPer/100
