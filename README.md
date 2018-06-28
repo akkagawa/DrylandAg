@@ -11,7 +11,7 @@ Last updated 27 June 2018
 This script extracts values of gridded climate data for known locations and generates visualizations including Figures 2, 3, A2 in the manuscript.
 
 ## [FieldSystemCovariates_CombinedAnalysesFin.R](https://github.com/akkagawa/DrylandAg/blob/master/Scripts/FieldSystemCovariates_CombinedAnalysesFin.R)
-This script, associated with [FieldSystemCovariates_Polygons_GraphsFin.R](https://github.com/akkagawa/DrylandAg/blob/master/FieldSystemCovariates_Polygons_GraphsFin.R), 
+This script, associated with [FieldSystemCovariates_Polygons_GraphsFin.R](https://github.com/akkagawa/DrylandAg/blob/master/Scripts/FieldSystemCovariates_Polygons_GraphsFin.R), 
 1) generates rasters for seasonality metrics of aridity
 2) explores intra-annual shifting of pre-defined "optimal" growing conditions
 3) generates Figures 4, 7 in the manuscript
