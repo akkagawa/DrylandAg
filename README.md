@@ -1,13 +1,11 @@
 # DrylandAg
-Listed below are scripts associated with analyses and figures for manuscript on Hawaii Island dryland agriculture and seasonality.  Please cite (for now) 
+Listed below are scripts associated with analyses and figures for manuscript on Hawaii Island dryland agriculture and seasonality.  Please cite (for now):
 
 Kagawa-Viviani A.K., N.K. Lincoln, S. Quintus, M.P. Lucas, T.W. Giambelluca. (in review) Spatial patterns of seasonal crop production suggest coordination within and across dryland agricultural systems of Hawaiʻi Island. Ecology and Society.
 
-Copyright(c) 2017, A. Kagawa-Viviani, All rights reserved
+Feel free to download and use the data and code in this repo for non-commerical purposes. If you publish analyses using our data or code, please be sure to cite the paper above. Thank you!
 
-Feel free to download and use the data and code in this repo for non-commerical purposes. If you publish analyses using our data or code, be sure to cite the paper above and also contact me (Aurora Kagawa-Viviani, kagawa@hawaii.edu) to let us know. Thank you!
-
-Last updated 25 June 2018
+Last updated 27 June 2018
 
 ## [FieldSystemCovariates_Polygons_GraphsFin.R](https://github.com/akkagawa/DrylandAg/blob/master/FieldSystemCovariates_Polygons_GraphsFin.R)
 This script extracts values of gridded climate data for known locations and generates visualizations including Figures 2, 3, A2 in the manuscript.
